@@ -4,7 +4,12 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
+        <p>Title</p>
+        <p>{this.props.title}</p>
+        <p>Project</p>
+        <p>{this.props.project}</p>
         <p>{this.props.elapsedTime}</p>
+        <button onClick={this.props.handleEditClick}>EditForm</button>
         <TimerBottomButton
           handleStopClick={this.props.handleStopClick}
           handleStartClick={this.props.handleStartClick}
