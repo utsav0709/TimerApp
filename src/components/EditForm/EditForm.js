@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from "../../utils/uuid.js";
 
 class EditForm extends React.Component {
   constructor(props) {
@@ -24,15 +25,18 @@ class EditForm extends React.Component {
 
   localSubmitHandle = e => {
     e.preventDefault();
-    this.props.handleSubmitClick({
+    this.props.handleUpdateClick({
       title: this.state.title,
-      project: this.state.project
+      project: this.state.project,
+      id: this.props.id || uuid.v4()
     });
   };
+
   localCancelHandle = e => {
     e.preventDefault();
     this.props.handleCancelClick();
   };
+
   render() {
     return (
       <div>

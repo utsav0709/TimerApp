@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Timer from "./components/EditableTimer/EditableTimer.js";
+import TimerDashBoard from "./components/TimerDashBoard/TimerDashBoard.js";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <div>
-            <Timer />
+            <TimerDashBoard />
           </div>
           <a
             className="App-link"
